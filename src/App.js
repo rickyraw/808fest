@@ -10,16 +10,21 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 import logo from "./808fest_outline_vector-04.png";
-import heroImage from "./808fest-hero.png";
+import heroImage from "./808FEST-2019-FLYER.png";
 import detailsImage from "./808fest-details.png";
-import egyptianLover from "./808fest-egyptian-lover.jpg";
+import egyptianLover from "./808fest-egyptian-lover-web.jpg";
 import baauer from "./BAAUER-808-FEST.jpg";
 import blockParty from "./808fest-block-party.jpg";
 import customDivider from "./808fest-atlanta-music-fest-underline.png";
 import ticketwinIcon from "./Ticketwin-icon-black.png";
+import blackTieLogo from "./blackTieLogo.png";
 import "./App.css";
+
+const mailChimpUrl =
+  "https://facebook.us16.list-manage.com/subscribe/post?u=b7fd608fb43b7ab36223401b0&amp;id=5fba3b9adf";
 
 const theme = createMuiTheme({
   palette: {
@@ -55,7 +60,7 @@ class App extends Component {
               rel="noopener noreferrer"
             >
               <img src={heroImage} className="heroImage" />
-              <h2 className="fourDayPass">3 DAY PASS</h2>
+              <h2 className="fourDayPass">4 DAY PASS</h2>
               <p>( $100 value )</p>
               <Button
                 variant="contained"
@@ -157,10 +162,12 @@ class App extends Component {
                 </Card>
               </Grid>
 
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={6}>
                 <Card className="cardBorderRed">
                   <CardContent>
-                    <Typography color="textSecondary">TBA</Typography>
+                    <Typography color="textSecondary">
+                      WESTSIDE CULTURAL ARTS CENTER
+                    </Typography>
                     <Typography variant="headline" component="h2">
                       SATURDAY
                       <br />
@@ -187,9 +194,41 @@ class App extends Component {
                   </CardActions>
                 </Card>
               </Grid>
+              <Grid item xs={12} sm={6}>
+                <Card className="cardBorderYellow">
+                  <CardContent>
+                    <Typography color="textSecondary">
+                      THE MUSIC ROOM & EDGEWOOD SPKEZ
+                    </Typography>
+                    <Typography variant="headline" component="h2">
+                      SUNDAY
+                      <br />
+                      AUGUST 11, 2019
+                    </Typography>
+                    <Typography component="p">
+                      EDGEWOOD SPKEZ @ 4PM • ARCHMAGE • JOHNNY GOODTIME • KAF •
+                      MICKY & WICKY • NONJAKID • TIM C • RICKY RAW
+                      <hr />
+                      THE MUSIC ROOM @ 8PM • DAKOTA DESHON • ARMANNI REIGN •
+                      ERVIN MITCHELL • PROTÉJAY • JSTELLA • LINZ PRAG • FRSHMNYR
+                    </Typography>
+                  </CardContent>
+                  <CardActions style={{ justifyContent: "center" }}>
+                    <a
+                      href="https://www.eventbrite.com/e/808-fest-404-audio-access-dnb-tickets-66815598253"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button size="small" color="secondary">
+                        <FontAwesome name="ticket" />
+                        &nbsp;Get Tickets&nbsp;
+                        <FontAwesome name="ticket" />
+                      </Button>
+                    </a>
+                  </CardActions>
+                </Card>
+              </Grid>
             </Grid>
-
-            <img src={detailsImage} className="heroImage" alt="detailsImage" />
 
             <img src={customDivider} className="customDivider" alt="logo" />
 
@@ -255,52 +294,25 @@ class App extends Component {
               </Grid>
             </Grid>
 
-            <img src={customDivider} className="customDivider" alt="logo" />
             <div id="mc_embed_signup">
-              <form
-                action="https://facebook.us16.list-manage.com/subscribe/post?u=b7fd608fb43b7ab36223401b0&amp;id=5fba3b9adf"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                className="validate"
-                target="_blank"
-                rel="noopener noreferrer"
-                noValidate
-              >
-                <div id="mc_embed_signup_scroll">
-                  <label>Subscribe to our mailing list</label>
-                  <input
-                    type="email"
-                    value=""
-                    name="EMAIL"
-                    className="email"
-                    id="mce-EMAIL"
-                    placeholder="email address"
-                    required
-                  />
-                  <div
-                    style={{ position: "absolute", left: "-5000px" }}
-                    aria-hidden="true"
-                  >
-                    <input
-                      type="text"
-                      name="b_b7fd608fb43b7ab36223401b0_5fba3b9adf"
-                      tabIndex="-1"
-                      value=""
-                    />
-                  </div>
-                  <div className="clear">
-                    <input
-                      type="submit"
-                      value="Subscribe"
-                      name="subscribe"
-                      id="mc-embedded-subscribe"
-                      className="button"
-                    />
-                  </div>
-                </div>
-              </form>
+              <div id="mc_embed_signup_scroll">
+                <label>
+                  <FontAwesome name="envelope" /> Subscribe to our mailing list
+                </label>
+                <MailchimpSubscribe url={mailChimpUrl} />
+              </div>
             </div>
+            <img src={customDivider} className="customDivider" alt="logo" />
+
+            <div>Sponsored by:</div>
+            <a
+              className="blacktiecbdLink"
+              href="https://blacktiecbd.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={blackTieLogo} className="heroImage" />
+            </a>
           </div>
           <footer className="App-footer">
             <div>

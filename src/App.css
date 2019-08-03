@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .App-logo {
@@ -13,7 +13,7 @@
 }
 
 .App-header {
-  background-image: url('./808fest_background_colors.png');
+  background-image: url("./808fest_background_colors.png");
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -24,7 +24,7 @@
 }
 
 .App-footer {
-  background-image: url('./808fest_background_colors.png');
+  background-image: url("./808fest_background_colors.png");
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -169,4 +169,31 @@ a:hover {
 .ticketwinIcon {
   max-width: 28px;
   padding-top: 4px;
+}
+
+#mc_embed_signup {
+  margin: 28px 0px 28px 0px;
+}
+
+#mc_embed_signup input {
+  width: 76%;
+  margin: 10px 4px 10px 2px;
+  border: 1px solid grey;
+  height: 20px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+#mc_embed_signup button {
+  width: 20%;
+  background-color: #f1813c;
+  color: #fff;
+  height: 30px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+#mc_embed_signup button:hover {
+  color: #f1813c;
+  background-color: #f8c843;
 }
